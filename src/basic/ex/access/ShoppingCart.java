@@ -6,6 +6,11 @@ public class ShoppingCart {
     private int itemCount = 0;
 
     public void addItem(Item item) {
+        if (itemCount >= items.length) {
+            System.out.println("장바구니가 가득 찼습니다.");
+            return;
+        }
+
         items[itemCount] = item;
         itemCount++;
     }
@@ -18,9 +23,6 @@ public class ShoppingCart {
             Item item = items[i];
             System.out.println("상품명: " + item.getName() + ", 합계: " + item.getTotalPrice());
             totalPrice += item.getTotalPrice();
-        }
-        for (Item item : items) {
-
         }
 
         System.out.println("전체 가격 합: " + totalPrice);
