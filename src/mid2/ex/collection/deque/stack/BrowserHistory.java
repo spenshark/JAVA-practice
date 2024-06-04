@@ -1,4 +1,4 @@
-package mid2.ex.collection.map.stack;
+package mid2.ex.collection.deque.stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
